@@ -2,7 +2,8 @@
   padding: $base-size * 2;
 
   .manager-contact {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
   }
 
   h2 {
@@ -11,22 +12,14 @@
   }
 
   img {
-    display: inline;
     width: $base-size * 4;
     height: $base-size * 4;
     margin: ($base-size * 2) 0;
     cursor: pointer;
   }
 
-  p {
+  a {
     font-size: $font-size-header;
-    display: inline;
-    color: $color-blue;
-    margin: ($base-size * 3.3) 0 0 $base-size;
-    cursor: pointer;
-
-    &:hover {
-      color: $color-orange;
-    }
+    margin-left: $base-size;
   }
 }

@@ -1,0 +1,50 @@
+.comp--topbar {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background: $color-white;
+  border: 3px solid $color-background;
+  width: 100%;
+
+  .topbar-box {
+    display: inline-flex;
+    align-items: center;
+    padding: $base-size * 1.5;
+    border-left: 3px solid $color-background;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-background;
+    }
+  }
+
+  .topbar-item {
+    margin: 0 $base-size;
+  }
+
+  img {
+    width: $base-size * 2;
+    height: $base-size * 2;
+    filter: $color-section-filter;
+
+    &.small {
+      width: $base-size * 1.5;
+      height: $base-size * 1.5;
+    }
+  }
+
+  .alerts {
+      position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: $base-size;
+      height: $base-size;
+      top: 14px;
+      left: 44px;
+      background: $color-orange;
+      border-radius: 50%;
+    }
+  }
+}

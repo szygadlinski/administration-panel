@@ -8,9 +8,14 @@ $color-background: #e3e3e3;
 $color-dark-background: #333333;
 $color-light: #f5f5f2;
 
+$color-section-filter: invert(68%) sepia(0%) saturate(1340%) hue-rotate(169deg) brightness(90%) contrast(80%);
+$color-background-filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(157deg) brightness(93%) contrast(94%);
+$color-light-filter: invert(93%) sepia(8%) saturate(946%) hue-rotate(57deg) brightness(127%) contrast(92%);
+
 $color-orange: #f58220;
 $color-blue: #56819f;
 $color-green: #04ae00;
+$color-white: #ffffff;
 
 /* Base size */
 

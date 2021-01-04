@@ -1,7 +1,7 @@
 .comp--logo {
   display: flex;
   justify-content: space-between;
-  padding: ($base-size * 2) 0 $base-size ($base-size * 2);
+  padding: ($base-size * 2) ($base-size * 2) $base-size;
   cursor: pointer;
 
   i {

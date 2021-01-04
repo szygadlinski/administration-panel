@@ -1,36 +1,32 @@
 .comp--navigation {
-  padding: $base-size * 2;
+  padding: ($base-size * 2) 0;
 
   img {
-    display: inline;
     width: $base-size * 2;
     height: $base-size * 2;
+    filter: $color-section-filter;  // TODO: zmienić na $color-background-filter
   }
 
-  path {
-    fill: $color-section;    // NIE DZIAŁA // TODO: zmienić na $color-background
-  }
-
-  p {
-    display: inline;
+  a {
     color: $color-section;                 // TODO: zmienić na $color-background
-    margin: ($base-size / 2) 0 0 $base-size;
+    margin-left: $base-size;
   }
 
   .nav-box {
     display: flex;
-    padding: $base-size 0;
+    align-items: center;
+    padding: $base-size ($base-size * 2);
     cursor: pointer;
 
-    &:hover {
-      border-left: 3px solid $color-orange;
+    &:hover, &.active {
+      border-left: 4px solid $color-orange;
       background: $color-section;
 
-      path {
-        fill: $color-light;                                        // NIE DZIAŁA
+      img {
+        filter: $color-light-filter;
       }
 
-      p {
+      a {
         color: $color-light;
       }
     }
