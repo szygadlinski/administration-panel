@@ -1,25 +1,29 @@
 /* Colors */
 
-$section-color: #979797;
-$header-color: #636363;
-$text-color: #000000;
+$color-section: #979797;
+$color-header: #636363;
+$color-text: #000000;
 
-$background-color: #e3e3e3;
-$dark-background-color: #333333;
-$light-color: #f5f5f2;
+$color-background: #e3e3e3;
+$color-dark-background: #333333;
+$color-light: #f5f5f2;
 
-$orange-color: #f58220;
-$blue-color: #56819f;
-$green-color: #04ae00;
+$color-orange: #f58220;
+$color-blue: #56819f;
+$color-green: #04ae00;
+
+/* Base size */
+
+$base-size: 12px;
 
 /* Font sizes */
 
-$logo-font-size: 30px;
-$section-font-size: 20px;
-$header-font-size: 18px;
-$text-font-size: 16px;
+$font-size-logo: 35px;
+$font-size-section: 18px;
+$font-size-header: 16px;
+$font-size-text: 14px;
 
 /* Fonts */
 
-$logo-font: "Logo Font", Helvetica, Arial;
-$text-font: "Open Sans", Helvetica, Arial;
+$font-logo: "Logo Font", Helvetica, Arial;
+$font-text: "Open Sans", Helvetica, Arial;

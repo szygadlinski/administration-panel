@@ -5,10 +5,17 @@
 @import "layout";
 
 /* Components */
+
+@import "components/logo";
+@import "components/navigation";
+@import "components/manager";
 // @import "components/form_field";
 
 /* Sections */
+
 // @import "sections/registration_form";
 
 /* Pages */
+
+@import "pages/general";
 // @import "pages/registration";
