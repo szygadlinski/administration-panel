@@ -1,12 +1,14 @@
 .comp--logo {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: ($base-size * 2) ($base-size * 2) $base-size;
+  width: 100%;
   cursor: pointer;
 
   i {
     font-size: $base-size * 2;
     color: $color-section;                 // TODO: zmienić na $color-background
-    padding-top: $base-size / 2;
+    padding-left: $base-size * 2;
   }
 }

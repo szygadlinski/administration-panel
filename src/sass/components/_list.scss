@@ -1,0 +1,49 @@
+.comp--list {
+  margin: $base-size * 2;
+  width: 100%;
+
+  .list-box {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background: inherit;
+    padding: $base-size * 1.5;
+    cursor: pointer;
+    border-bottom: 1px solid $color-section; // TODO: zmienić na $color-background
+
+    &:first-of-type {
+      border-top: 1px solid $color-section;  // TODO: zmienić na $color-background
+    }
+
+    &:hover {
+      background: $color-section;            // TODO: zmienić na $color-background
+
+      img {
+        display: inline-flex;
+      }
+    }
+  }
+
+  a {
+    position: absolute;
+    left: 45%;
+  }
+
+  .list-box-images {
+    position: absolute;
+    right: 0;
+
+    img {
+      width: $base-size * 1.5;
+      height: $base-size * 1.5;
+      margin-right: $base-size * 1.5;
+      filter: $color-header-filter;
+      display: none;
+
+      &:hover {
+        filter: $color-orange-filter;
+      }
+    }
+  }
+}

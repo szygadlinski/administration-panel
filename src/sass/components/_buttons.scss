@@ -1,0 +1,40 @@
+.btn {
+  padding: $base-size ($base-size * 2);
+  color: $color-light;
+  font-size: $font-size-header;
+  font-weight: 100;
+  overflow: hidden;
+  border: none;
+  border-radius: $base-size / 3;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-orange {
+  background: $color-orange;
+
+  &:hover {
+    background: $color-orange-light;
+  }
+}
+
+.btn-grey {
+  background: $color-header;
+
+  &:hover {
+    background: $color-section;
+  }
+}
+
+.btn-disabled {
+  display: inline-flex;
+  align-items: center;
+  background: $color-section;              // TODO: zmienić na $color-background
+  cursor: not-allowed;
+
+  img {
+    width: $base-size * 1.5;
+    height: $base-size * 1.5;
+    margin-right: $base-size;
+  }
+}

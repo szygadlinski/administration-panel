@@ -10,7 +10,9 @@
 @import "components/navigation";
 @import "components/manager";
 @import "components/topbar";
-// @import "components/form_field";
+@import "components/calendar";
+@import "components/buttons";
+@import "components/list";
 
 /* Sections */
 
@@ -19,4 +21,3 @@
 /* Pages */
 
 @import "pages/general";
-// @import "pages/registration";

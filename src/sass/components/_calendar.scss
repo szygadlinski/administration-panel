@@ -1,0 +1,65 @@
+.comp--calendar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin: $base-size * 2;
+
+  .calendar-form {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $color-section;      // TODO: zmienić na $color-background
+    border-radius: $base-size / 3;
+    padding: ($base-size / 2) 0;
+    margin-right: $base-size * 1.5;
+
+    input {
+      color: $color-text;
+      font-size: $font-size-text;
+      padding: ($base-size / 2) $base-size;
+      background: inherit;
+      border: none;
+      outline: none;
+
+      &:last-of-type {
+        border-left: 1px solid $color-section; // TODO: zmienić na $color-background
+      }
+    }
+
+    .calendar-image {
+      padding:($base-size / 2) $base-size;
+      cursor: pointer;
+
+      img {
+        width: $base-size * 1.5;
+        height: $base-size * 1.5;
+        filter: $color-section-filter;
+      }
+    }
+
+    &:hover {
+      border: 1px solid $color-header;        // TODO: zmienić na $color-section
+    }
+  }
+
+  .calendar-refresh {
+    background: $color-orange;
+    border: 1px solid $color-orange;
+    border-radius: $base-size / 3;
+    padding: $base-size;
+    cursor: pointer;
+
+    img {
+      width: $base-size * 1.5;
+      height: $base-size * 1.5;
+      filter: $color-light-filter;
+    }
+
+    &:hover {
+      background: $color-orange-light;
+      border: 1px solid $color-orange-light;
+    }
+  }
+}
