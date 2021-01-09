@@ -1,7 +1,6 @@
 .btn {
   padding: $base-size ($base-size * 2);
   margin: ($base-size * 2) 0;
-
   color: $color-light;
   font-size: $font-size-header;
   font-weight: 100;
@@ -47,7 +46,7 @@
   align-items: center;
   color: $color-header;
   background: inherit;
-  margin: 0 ($base-size * 2) 0;
+  margin: $base-size ($base-size * 2);
   padding-left: $base-size * 4;
 
   &::after {

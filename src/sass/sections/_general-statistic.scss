@@ -15,6 +15,10 @@
     min-width: 45%;
     padding: ($base-size * 1.5) 0 ($base-size / 2);
     border-bottom: 1px solid $color-background;
+
+    h3 {
+      padding-right: $base-size;
+    }
   }
 
   .earnings-chart {
@@ -25,7 +29,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: ($base-size * 3) 0 ($base-size * 6);
+    padding: ($base-size * 2) 0 ($base-size * 4);
 
     .btn-signups::after {
       background: $color-blue;

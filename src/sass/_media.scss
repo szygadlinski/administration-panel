@@ -1,0 +1,20 @@
+@media (max-width: 767px) {
+  .section--general-statistic {
+    .calendar-form {
+      flex-direction: column;
+
+      input {
+        text-align: center;
+      }
+    }
+
+    .list-with-one-digit-box {
+      width: 100%;
+    }
+  }
+
+  // .comp--list {
+  //   .list-box {
+  //   }
+  // }
+}
