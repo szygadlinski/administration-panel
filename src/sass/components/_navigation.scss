@@ -1,15 +1,16 @@
 .comp--navigation {
   padding: ($base-size * 2) 0;
   width: 100%;
+  border-bottom: 1px solid $color-background;
 
   img {
     width: $base-size * 2;
     height: $base-size * 2;
-    filter: $color-section-filter;  // TODO: zmienić na $color-background-filter
+    filter: $color-section-filter;
   }
 
   a {
-    color: $color-section;                 // TODO: zmienić na $color-background
+    color: $color-section;
     margin-left: $base-size;
   }
 

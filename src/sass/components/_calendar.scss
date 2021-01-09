@@ -2,15 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  margin: $base-size * 2;
+  padding: $base-size * 4;
+  border-bottom: 1px solid $color-background;
 
   .calendar-form {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid $color-section;      // TODO: zmienić na $color-background
+    border: 1px solid $color-background;
     border-radius: $base-size / 3;
     padding: ($base-size / 2) 0;
     margin-right: $base-size * 1.5;
@@ -24,12 +26,12 @@
       outline: none;
 
       &:last-of-type {
-        border-left: 1px solid $color-section; // TODO: zmienić na $color-background
+        border-left: 1px solid $color-background;
       }
     }
 
     .calendar-image {
-      padding:($base-size / 2) $base-size;
+      padding: ($base-size / 2) $base-size;
       cursor: pointer;
 
       img {
@@ -40,7 +42,7 @@
     }
 
     &:hover {
-      border: 1px solid $color-header;        // TODO: zmienić na $color-section
+      border: 1px solid $color-section;
     }
   }
 

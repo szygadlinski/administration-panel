@@ -1,0 +1,9 @@
+.section--sidebar {
+  padding: 0;
+  background: $color-dark-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;                                                 // TODO: remove
+}

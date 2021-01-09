@@ -1,0 +1,51 @@
+.section--general-statistic {
+  .list-with-one-digit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: ($base-size * 2.5) 0 ($base-size * 1.5);
+  }
+
+  .list-with-one-digit-box {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 45%;
+    padding: ($base-size * 1.5) 0 ($base-size / 2);
+    border-bottom: 1px solid $color-background;
+  }
+
+  .earnings-chart {
+    padding: ($base-size * 4) 0;
+  }
+
+  .earnings-chart-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: ($base-size * 3) 0 ($base-size * 6);
+
+    .btn-signups::after {
+      background: $color-blue;
+    }
+
+    .btn-ftd::after {
+      background: $color-orange;
+    }
+
+    .btn-earned::after {
+      background: $color-green;
+    }
+  }
+
+  .earnings-chart-image {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 90%;
+    }
+  }
+}

@@ -3,6 +3,22 @@ body {
   background: $color-background;
 }
 
+section {
+  background: $color-white;
+  max-width: 80%;
+  margin: ($base-size * 2) ($base-size * 2) 0;
+  box-shadow: 0 0 $base-size $color-section;
+
+  .section-title {
+    padding: $base-size * 1.5;
+    border-bottom: 1px solid $color-background;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+}
+
 h1 {
   font-family: $font-logo;
   font-size: $font-size-logo;

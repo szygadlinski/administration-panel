@@ -1,5 +1,7 @@
 .btn {
   padding: $base-size ($base-size * 2);
+  margin: ($base-size * 2) 0;
+
   color: $color-light;
   font-size: $font-size-header;
   font-weight: 100;
@@ -36,5 +38,29 @@
     width: $base-size * 1.5;
     height: $base-size * 1.5;
     margin-right: $base-size;
+  }
+}
+
+.btn-chart {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: $color-header;
+  background: inherit;
+  margin: 0 ($base-size * 2) 0;
+  padding-left: $base-size * 4;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: $base-size * 1.5;
+    height: $base-size * 1.5;
+    top: 12px;
+    left: 16px;
+    border-radius: 50%;
+  }
+
+  &:hover, &.active {
+    background: $color-background;
   }
 }

@@ -34,7 +34,7 @@
   }
 
   .alerts {
-      position: relative;
+    position: relative;
 
     &::after {
       position: absolute;
@@ -45,6 +45,10 @@
       left: 44px;
       background: $color-orange;
       border-radius: 50%;
+    }
+
+    &:hover::after {
+      background: $color-orange-light;
     }
   }
 }
