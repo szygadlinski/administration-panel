@@ -1,12 +1,13 @@
 body {
   font-family: $font-text;
   background: $color-background;
+  margin-bottom: 2%;
 }
 
 section {
   background: $color-white;
-  max-width: 80%;
-  margin: ($base-size * 2) ($base-size * 2) 0;
+  width: 81%;
+  margin: 2% 2% 0 17%;
   box-shadow: 0 0 $base-size $color-section;
 
   .section-title {

@@ -1,3 +1,14 @@
+@media (min-width: 768px) and (max-width: 991px) {
+  .section--sidebar {
+    width: 20%;
+  }
+
+  section {
+    width: 76%;
+    margin-left: 22%;
+  }
+}
+
 @media (max-width: 767px) {
   .section--general-statistic {
     .calendar-form {

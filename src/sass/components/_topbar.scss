@@ -1,17 +1,26 @@
 .comp--topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
   display: inline-flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   background: $color-white;
-  border: 3px solid $color-background;
+  border-bottom: 1px solid $color-section;
   width: 100%;
+  height: 70px;
+  z-index: 1;
 
   .topbar-box {
     display: inline-flex;
     align-items: center;
     padding: $base-size * 1.5;
-    border-left: 3px solid $color-background;
+    border-left: 1px solid $color-section;
     cursor: pointer;
+
+    &:last-of-type {
+      border-right: 1px solid $color-section;
+    }
 
     &:hover {
       background: $color-background;
@@ -41,8 +50,8 @@
       content: '';
       width: $base-size;
       height: $base-size;
-      top: 14px;
-      left: 44px;
+      top: 18px;
+      left: 42px;
       background: $color-orange;
       border-radius: 50%;
     }
