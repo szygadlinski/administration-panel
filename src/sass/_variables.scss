@@ -20,13 +20,10 @@ $color-background-filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(157deg) 
 $color-light-filter: invert(93%) sepia(8%) saturate(946%) hue-rotate(57deg) brightness(127%) contrast(92%);
 $color-orange-filter: invert(54%) sepia(63%) saturate(1222%) hue-rotate(347deg) brightness(99%) contrast(94%);
 
-/* Base size */
-
-$base-size: 12px;
 
 /* Font sizes */
 
-$font-size-logo: 35px;
+$font-size-logo: 32px;
 $font-size-section: 18px;
 $font-size-header: 16px;
 $font-size-text: 14px;
@@ -35,3 +32,8 @@ $font-size-text: 14px;
 
 $font-logo: "Logo Font", Helvetica, Arial;
 $font-text: "Open Sans", Helvetica, Arial;
+
+/* Others */
+
+$base-size: 12px;
+$transition: all 0.5s;

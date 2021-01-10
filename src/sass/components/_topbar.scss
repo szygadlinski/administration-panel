@@ -10,6 +10,7 @@
   width: 100%;
   height: 70px;
   z-index: 1;
+  transition: $transition;
 
   .topbar-box {
     display: inline-flex;

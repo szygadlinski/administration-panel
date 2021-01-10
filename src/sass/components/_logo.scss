@@ -1,14 +1,26 @@
-.comp--logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: ($base-size * 2) ($base-size * 2) $base-size;
-  width: 100%;
-  cursor: pointer;
+.section--logo {
+  padding: 0;
+  background: $color-dark-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15%;
+  z-index: 2;
+  transition: $transition;
 
-  i {
-    font-size: $base-size * 2;
-    color: $color-section;
-    padding-left: $base-size * 2;
+  .comp--logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $base-size;
+    width: 100%;
+    height: 70px;
+    cursor: pointer;
+
+    i {
+      font-size: $base-size * 2;
+      color: $color-section;
+      padding-left: $base-size;
+    }
   }
 }

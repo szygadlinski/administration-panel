@@ -9,6 +9,7 @@ section {
   width: 81%;
   margin: 2% 2% 0 17%;
   box-shadow: 0 0 $base-size $color-section;
+  transition: $transition;
 
   .section-title {
     padding: $base-size * 1.5;
@@ -18,6 +19,11 @@ section {
   .container {
     max-width: 960px;
   }
+}
+
+.extended {
+  width: 96%;
+  margin: 2% 2% 0 2%;
 }
 
 h1 {

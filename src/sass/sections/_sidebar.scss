@@ -2,10 +2,15 @@
   padding: 0;
   background: $color-dark-background;
   position: fixed;
-  top: 0;
+  top: 70px;
   left: 0;
   width: 15%;
   height: 100%;
   z-index: 2;
-  //display: none;                                                 // TODO: remove
+  transition: $transition;
+
+  &.collapsed {
+    height: 0;
+    overflow: hidden;
+  }
 }
