@@ -33,6 +33,17 @@
     initButtons(){
       const thisButtons = this;
 
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 767){
+        for (const collapsingElement of thisButtons.dom.collapsingElements){
+          collapsingElement.classList.add(classNames.collapsed);
+        }
+        for (const extendingElement of thisButtons.dom.extendingElements){
+          extendingElement.classList.add(classNames.extended);
+        }
+      }
+
       thisButtons.dom.collapsingButton.addEventListener('click', function(){
         for (const collapsingElement of thisButtons.dom.collapsingElements){
           collapsingElement.classList.toggle(classNames.collapsed);
