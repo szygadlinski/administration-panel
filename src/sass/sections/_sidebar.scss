@@ -5,9 +5,10 @@
   top: 70px;
   left: 0;
   width: 15%;
-  height: 100%;
+  height: calc(100% - 70px);
   z-index: 2;
   transition: $transition;
+  overflow: auto;
 
   &.collapsed {
     height: 0;

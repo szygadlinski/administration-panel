@@ -10,8 +10,13 @@
 }
 
 @media (max-width: 767px) {
-  .section--logo, .section--sidebar {
+  .section--logo {
     width: 100%;
+  }
+
+  .section--sidebar {
+    width: 100%;
+    height: calc(100% - 266px);
   }
 
   .comp--topbar {
@@ -70,6 +75,7 @@
   .section--general-statistic {
     .calendar-form {
       flex-direction: column;
+      margin-right: 0;
 
       input {
         text-align: center;
@@ -85,8 +91,9 @@
     }
   }
 
-  // .comp--list {
-  //   .list-box {
-  //   }
-  // }
+  .comp--list {
+    h3 {
+      flex-basis: 100%;
+    }
+  }
 }
