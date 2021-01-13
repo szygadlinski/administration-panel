@@ -3,34 +3,28 @@
   width: 100%;
   border-bottom: 1px solid $color-section;
 
-  img {
-    width: $base-size * 2;
-    height: $base-size * 2;
-    filter: $color-section-filter;
-  }
-
   a {
-    color: $color-section;
-    margin-left: $base-size;
-  }
-
-  .nav-box {
     display: flex;
     align-items: center;
     padding: $base-size ($base-size * 2);
     cursor: pointer;
+    color: $color-section;
 
     &:hover, &.active {
       border-left: 4px solid $color-orange;
       background: $color-section;
+      color: $color-light;
 
       img {
         filter: $color-light-filter;
       }
-
-      a {
-        color: $color-light;
-      }
     }
+  }
+
+  img {
+    width: $base-size * 2;
+    height: $base-size * 2;
+    filter: $color-section-filter;
+    margin-right: $base-size;
   }
 }

@@ -1,15 +1,31 @@
 body {
   font-family: $font-text;
   background: $color-background;
-  margin-bottom: 2%;
 }
 
-section {
+.pages {
+  > * {
+    width: 81%;
+    margin: 0 2% 0 17%;
+    padding-top: calc(70px + 2%);
+    transition: $transition;
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+.extended > * {
+  width: 96%;
+  margin: 0 2% 0 2%;
+}
+
+.section {
+  margin-bottom: 2%;
   background: $color-white;
-  width: 81%;
-  margin: 2% 2% 0 17%;
   box-shadow: 0 0 $base-size $color-section;
-  transition: $transition;
 
   .section-title {
     padding: $base-size * 1.5;
@@ -19,12 +35,9 @@ section {
   .container {
     max-width: 960px;
   }
+
 }
 
-.extended {
-  width: 96%;
-  margin: 2% 2% 0 2%;
-}
 
 h1 {
   font-family: $font-logo;

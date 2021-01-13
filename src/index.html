@@ -25,40 +25,13 @@
 
   <nav class="section--sidebar collapsing">                     <!-- sidebar -->
     <div class="comp--navigation">
-      <div class="nav-box active">
-        <img src="images/icons/general.svg">
-        <a href="#">General</a>
-      </div>
-
-      <div class="nav-box">
-        <img src="images/icons/details.svg">
-        <a href="#">Details</a>
-      </div>
-
-      <div class="nav-box">
-        <img src="images/icons/links.svg">
-        <a href="#">Links</a>
-      </div>
-
-      <div class="nav-box">
-        <img src="images/icons/banners.svg">
-        <a href="#">Banners</a>
-      </div>
-
-      <div class="nav-box">
-        <img src="images/icons/personaldata.svg">
-        <a href="#">Personal data</a>
-      </div>
-
-      <div class="nav-box">
-        <img src="images/icons/payout.svg">
-        <a href="#">Payout</a>
-      </div>
-
-      <div class="nav-box">
-        <img src="images/icons/postback.svg">
-        <a href="#">Postback</a>
-      </div>
+      <a href="#general"><img src="images/icons/general.svg">General</a>
+      <a href="#details"><img src="images/icons/details.svg">Details</a>
+      <a href="#links"><img src="images/icons/links.svg">Links</a>
+      <a href="#banners"><img src="images/icons/banners.svg">Banners</a>
+      <a href="#personaldata"><img src="images/icons/personaldata.svg">Personal data</a>
+      <a href="#payout"><img src="images/icons/payout.svg">Payout</a>
+      <a href="#postback"><img src="images/icons/postback.svg">Postback</a>
     </div>
 
     <div class="comp--manager">
@@ -69,7 +42,6 @@
       </div>
     </div>
   </nav>
-
 
   <nav class="comp--topbar collapsing">                          <!-- topbar -->
     <div class="topbar-box wallet">
@@ -92,168 +64,189 @@
     </div>
   </nav>
 
+  <div class="pages">                                   <!-- page containers -->
+    <section id="general">
+      <div class="general-wrapper"></div>
+    </section>
+    <section id="links">
+      <div class="links-wrapper"></div>
+    </section>
+    <section id="banners">
+      <div class="banners-wrapper"></div>
+    </section>
+  </div>
 
-  <section class="section--general-statistic extending"> <!-- general statistic -->
-    <h2 class="section-title">General statistic</h2>
+  <script id="template-general" type="text/x-handlebars-template">
+    <div class="section section--general-statistic"> <!-- general statistic -->
+      <h2 class="section-title">General statistic</h2>
 
-    <div class="comp--calendar">
-      <div class="calendar-form">
-        <input type="text" name="date" value="16.05.2016">
-        <input type="text" name="date" value="16.05.2016">
-        <div class="calendar-image">
-          <img src="images/icons/calendar.svg">
+      <div class="comp--calendar">
+        <div class="calendar-form">
+          <input type="text" name="date" value="16.05.2016">
+          <input type="text" name="date" value="16.05.2016">
+          <div class="calendar-image">
+            <img src="images/icons/calendar.svg">
+          </div>
+        </div>
+        <div class="calendar-refresh">
+          <img src="images/icons/refresh.svg">
         </div>
       </div>
-      <div class="calendar-refresh">
-        <img src="images/icons/refresh.svg">
+
+      <div class="container">
+        <div class="list-with-one-digit">
+          <div class="list-with-one-digit-box">
+            <h3>Visit Signups</h3>
+            <p>124</p>
+          </div>
+
+          <div class="list-with-one-digit-box">
+            <h3>Net deposit</h3>
+            <p>564</p>
+          </div>
+
+          <div class="list-with-one-digit-box">
+            <h3>FTD</h3>
+            <p>445</p>
+          </div>
+
+          <div class="list-with-one-digit-box">
+            <h3>Turn over</h3>
+            <p>432</p>
+          </div>
+        </div>
+
+        <div class="earnings-chart">
+          <h3>Earnings chart</h3>
+          <div class="earnings-chart-buttons">
+            <button class="btn btn-chart btn-signups active" type="button">Signups</button>
+            <button class="btn btn-chart btn-ftd active" type="button">FTD</button>
+            <button class="btn btn-chart btn-earned" type="button">Earned</button>
+          </div>
+          <div class="earnings-chart-image">
+            <img src="images/graph.png">
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="list-with-one-digit">
-        <div class="list-with-one-digit-box">
-          <h3>Visit Signups</h3>
-          <p>124</p>
+    <div class="section section--links">                  <!-- links -->
+      <h2 class="section-title">Links</h2>
+      <div class="container">
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
         </div>
 
-        <div class="list-with-one-digit-box">
-          <h3>Net deposit</h3>
-          <p>564</p>
+        <div class="comp--list">
+          <div class="list-box">
+            <h3>Home page</h3>
+            <a href="#">http://www.homepage.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Currently offer</h3>
+            <a href="#">http://www.currently.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Blurpix</h3>
+            <a href="#">http://www.blurpix.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Your site</h3>
+            <a href="#">http://www.yoursite.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Google</h3>
+            <a href="#">http://www.google.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Facebook</h3>
+            <a href="#">http://www.facebook.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Dashboard</h3>
+            <a href="#">http://www.dashboard.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Blurax</h3>
+            <a href="#">http://www.blurax.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Piece of Wine</h3>
+            <a href="#">http://www.pieceofwine.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Twitter</h3>
+            <a href="#">http://www.twitter.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
         </div>
 
-        <div class="list-with-one-digit-box">
-          <h3>FTD</h3>
-          <p>445</p>
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
         </div>
 
-        <div class="list-with-one-digit-box">
-          <h3>Turn over</h3>
-          <p>432</p>
-        </div>
-      </div>
-
-      <div class="earnings-chart">
-        <h3>Earnings chart</h3>
-        <div class="earnings-chart-buttons">
-          <button class="btn btn-chart btn-signups active" type="button">Signups</button>
-          <button class="btn btn-chart btn-ftd active" type="button">FTD</button>
-          <button class="btn btn-chart btn-earned" type="button">Earned</button>
-        </div>
-        <div class="earnings-chart-image">
-          <img src="images/graph.png">
-        </div>
       </div>
     </div>
-  </section>
+  </script>
 
+  <script id="template-links" type="text/x-handlebars-template">
+DASDASDC
+  </script>
 
-  <section class="section--links extending">                      <!-- links -->
-    <h2 class="section-title">Links</h2>
-    <div class="container">
+  <script id="template-banners" type="text/x-handlebars-template">
 
-      <div class="new-link-button">
-        <button class="btn btn-orange" type="button">+ add new</button>
-      </div>
+  </script>
 
-      <div class="comp--list">
-        <div class="list-box">
-          <h3>Home page</h3>
-          <a href="#">http://www.homepage.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Currently offer</h3>
-          <a href="#">http://www.currently.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Blurpix</h3>
-          <a href="#">http://www.blurpix.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Your site</h3>
-          <a href="#">http://www.yoursite.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Google</h3>
-          <a href="#">http://www.google.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Facebook</h3>
-          <a href="#">http://www.facebook.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Dashboard</h3>
-          <a href="#">http://www.dashboard.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Blurax</h3>
-          <a href="#">http://www.blurax.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Piece of Wine</h3>
-          <a href="#">http://www.pieceofwine.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-
-        <div class="list-box">
-          <h3>Twitter</h3>
-          <a href="#">http://www.twitter.com</a>
-          <div class="list-box-images">
-            <img src="images/icons/links.svg">
-            <img src="images/icons/trash.svg">
-          </div>
-        </div>
-      </div>
-
-      <div class="new-link-button">
-        <button class="btn btn-orange" type="button">+ add new</button>
-      </div>
-
-    </div>
-  </section>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/script.js"></script>
 
 </body>

@@ -28,6 +28,11 @@
       &:last-of-type {
         border-left: 1px solid $color-background;
       }
+
+      &:focus {
+        background: $color-background;
+        border-radius: $base-size * 2;
+      }
     }
 
     .calendar-image {

@@ -3,9 +3,14 @@
     width: 20%;
   }
 
-  section {
+  .pages > * {
     width: 76%;
     margin-left: 22%;
+  }
+
+  .extended > * {
+    width: 96%;
+    margin: 0 2% 0 2%;
   }
 }
 
@@ -67,7 +72,7 @@
     }
   }
 
-  section {
+  .pages > * {
     width: 96%;
     margin-left: 2%;
   }
