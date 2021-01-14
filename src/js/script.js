@@ -8,12 +8,14 @@
       general: '#template-general',
       links: '#template-links',
       banners: '#template-banners',
+      personalData: '#template-personaldata',
     },
     containerOf: {
       pages: '.pages',
       general: '.general-wrapper',
       links: '.links-wrapper',
       banners: '.banners-wrapper',
+      personalData: '.personaldata-wrapper',
     },
     navLinks: '.comp--navigation a',
     collapsingButton: '.collapsing-button',
@@ -30,6 +32,7 @@
     general: Handlebars.compile(document.querySelector(select.templateOf.general).innerHTML),
     links: Handlebars.compile(document.querySelector(select.templateOf.links).innerHTML),
     banners: Handlebars.compile(document.querySelector(select.templateOf.banners).innerHTML),
+    personalData: Handlebars.compile(document.querySelector(select.templateOf.personalData).innerHTML),
   };
 
 
@@ -60,6 +63,7 @@
         general: templates.general(),
         links: templates.links(),
         banners: templates.banners(),
+        personalData: templates.personalData(),
       };
 
       thisPanel.dom.generalWrapper = document.querySelector(select.containerOf.general);
@@ -70,6 +74,9 @@
 
       thisPanel.dom.bannersWrapper = document.querySelector(select.containerOf.banners);
       thisPanel.dom.bannersWrapper.innerHTML = generatedHTMLOf.banners;
+
+      thisPanel.dom.personalDataWrapper = document.querySelector(select.containerOf.personalData);
+      thisPanel.dom.personalDataWrapper.innerHTML = generatedHTMLOf.personalData;
     }
 
     initWidgets(){

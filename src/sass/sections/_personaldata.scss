@@ -1,0 +1,62 @@
+.section--personaldata {
+  .field-group {
+    padding: ($base-size * 4) 0;
+    border-bottom: 1px solid $color-background;
+    width: 100%;
+  }
+
+  .field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: $base-size 0;
+    width: 40%;
+  }
+
+  label {
+    @extend h3;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="password"] {
+    @extend p;
+    padding: $base-size;
+    background: inherit;
+    width: 70%;
+    border: 1px solid $color-background;
+    border-radius: $base-size / 3;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $color-section;
+    }
+
+    &:focus {
+      background: $color-background;
+    }
+  }
+
+  input[type="password"]:valid {
+    border: 1px solid $color-green;
+  }
+
+  input[type="password"]:invalid {
+    border: 1px solid $color-invalid;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    padding: $base-size 0;
+  }
+}

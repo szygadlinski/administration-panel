@@ -1,8 +1,4 @@
 @media (min-width: 768px) and (max-width: 991px) {
-  .section--logo, .section--sidebar {
-    width: 20%;
-  }
-
   .pages > * {
     width: 76%;
     margin-left: 22%;
@@ -12,9 +8,32 @@
     width: 96%;
     margin: 0 2% 0;
   }
+
+  .section--logo, .section--sidebar {
+    width: 20%;
+  }
+
+  .section--personaldata {
+    .field {
+      flex-direction: column;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+      width: 100%;
+      margin-top: $base-size / 2;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+  .pages > * {
+    width: 96%;
+    margin-left: 2%;
+  }
+
   .section--logo {
     width: 100%;
   }
@@ -72,11 +91,6 @@
     }
   }
 
-  .pages > * {
-    width: 96%;
-    margin-left: 2%;
-  }
-
   .section--general-statistic {
     .calendar-form {
       flex-direction: column;
@@ -99,6 +113,21 @@
   .comp--list {
     h3 {
       flex-basis: 100%;
+    }
+  }
+
+  .section--personaldata {
+    .field {
+      flex-direction: column;
+      width: 70%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="password"] {
+      width: 100%;
+      margin-top: $base-size / 2;
     }
   }
 }

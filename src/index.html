@@ -74,6 +74,9 @@
     <section id="banners">
       <div class="banners-wrapper"></div>
     </section>
+    <section id="personaldata">
+      <div class="personaldata-wrapper"></div>
+    </section>
   </div>
 
   <script id="template-general" type="text/x-handlebars-template">
@@ -416,6 +419,71 @@
         </div>
 
       </div>
+    </div>
+  </script>
+
+  <script id="template-personaldata" type="text/x-handlebars-template">
+    <div class="section section--personaldata">           <!-- personal data -->
+      <h2 class="section-title">Personal data</h2>
+      <form action="" method="POST">
+
+        <div class="field-group">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Leonardo" minlength="2" maxlength="20" required>
+          </div>
+          <div class="field">
+            <label>Surname</label>
+            <input type="text" name="surname" placeholder="Dicaprio" minlength="2" maxlength="20" required>
+          </div>
+          <div class="field">
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="leo@gmail.com" minlength="6" maxlength="50" required>
+          </div>
+          <div class="field">
+            <label>Phone number</label>
+            <input type="number" name="phonenumber" placeholder="+14325550044" min="100000000" max="9999999999999" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label>Skype</label>
+            <input type="text" name="skype" placeholder="Leonardo.D">
+          </div>
+          <div class="field">
+            <label>ICQ</label>
+            <input type="text" name="icq">
+          </div>
+          <div class="field">
+            <label>Msn</label>
+            <input type="text" name="msn">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label>Wallet</label>
+            <input type="number" name="wallet" min="1" max="1000000" step="1">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" minlength="8" maxlength="32" required>
+          </div>
+          <div class="field">
+            <label>Repeat</label>
+            <input type="password" name="repeat" minlength="8" maxlength="32" required>
+          </div>
+        </div>
+
+        <div class="form-button">
+          <button class="btn btn-orange" type="submit">Save</button>
+        </div>
+
+      </form>
     </div>
   </script>
 

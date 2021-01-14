@@ -17,13 +17,14 @@
     padding: ($base-size / 2) 0;
     margin-right: $base-size * 1.5;
 
-    input {
+    input[type="text"] {
       color: $color-text;
       font-size: $font-size-text;
       padding: ($base-size / 2) $base-size;
       background: inherit;
       border: none;
       outline: none;
+      cursor: pointer;
 
       &:last-of-type {
         border-left: 1px solid $color-background;
@@ -31,7 +32,7 @@
 
       &:focus {
         background: $color-background;
-        border-radius: $base-size * 2;
+        border-radius: $base-size / 3;
       }
     }
 
