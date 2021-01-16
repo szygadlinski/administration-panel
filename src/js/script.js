@@ -6,6 +6,7 @@
   const select = {
     templateOf: {
       general: '#template-general',
+      details: '#template-details',
       links: '#template-links',
       banners: '#template-banners',
       personalData: '#template-personaldata',
@@ -14,6 +15,7 @@
     containerOf: {
       pages: '.pages',
       general: '.general-wrapper',
+      details: '.details-wrapper',
       links: '.links-wrapper',
       banners: '.banners-wrapper',
       personalData: '.personaldata-wrapper',
@@ -32,6 +34,7 @@
 
   const templates = {
     general: Handlebars.compile(document.querySelector(select.templateOf.general).innerHTML),
+    details: Handlebars.compile(document.querySelector(select.templateOf.details).innerHTML),
     links: Handlebars.compile(document.querySelector(select.templateOf.links).innerHTML),
     banners: Handlebars.compile(document.querySelector(select.templateOf.banners).innerHTML),
     personalData: Handlebars.compile(document.querySelector(select.templateOf.personalData).innerHTML),
@@ -64,6 +67,7 @@
 
       const generatedHTMLOf = {
         general: templates.general(),
+        details: templates.details(),
         links: templates.links(),
         banners: templates.banners(),
         personalData: templates.personalData(),
@@ -72,6 +76,9 @@
 
       thisPanel.dom.generalWrapper = document.querySelector(select.containerOf.general);
       thisPanel.dom.generalWrapper.innerHTML = generatedHTMLOf.general;
+
+      thisPanel.dom.detailsWrapper = document.querySelector(select.containerOf.details);
+      thisPanel.dom.detailsWrapper.innerHTML = generatedHTMLOf.details;
 
       thisPanel.dom.linksWrapper = document.querySelector(select.containerOf.links);
       thisPanel.dom.linksWrapper.innerHTML = generatedHTMLOf.links;

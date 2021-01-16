@@ -27,21 +27,27 @@
     }
   }
 
+  .section--payout, .section--details {
+    .column-header h3 {
+      font-size: $font-size-text;
+    }
+  }
+
   .section--payout .payout-table {
     .date .column-header {
-      width: 43%;
+      width: 80px;
     }
 
     .amount .column-header {
-      width: 67%;
+      width: 123px;
     }
 
     .deal .column-header {
-      width: 52%;
+      width: 77px;
     }
 
     .account .column-header {
-      width: 99%;
+      width: 103px;
     }
   }
 }

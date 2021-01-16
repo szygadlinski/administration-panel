@@ -8,80 +8,79 @@
     // max-width: 100%;                             // tabelki nie scrollują się
     background: inherit;
     margin: ($base-size * 2) auto;
+  }
 
+  .table-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: $base-size * 1.5;
+    cursor: pointer;
+    border-bottom: 1px solid $color-background;
 
-    .table-row {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      padding: $base-size * 1.5;
-      cursor: pointer;
-      border-bottom: 1px solid $color-background;
-
-      &:hover {
-        background: $color-background;
-      }
-
-      &.main:hover {
-        background: inherit;
-        cursor: inherit;
-      }
+    &:hover {
+      background: $color-background;
     }
 
-    .column-header {
-      position: relative;
-      padding: $base-size ($base-size * 3) $base-size $base-size;
+    &.main:hover {
+      background: inherit;
+      cursor: inherit;
+    }
+  }
+
+  .column-header {
+    position: relative;
+    padding: $base-size ($base-size * 3) $base-size $base-size;
+    border-radius: $base-size / 3;
+    cursor: pointer;
+
+    img {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: $base-size * .75;
+      height: $base-size * .75;
+      filter: $color-header-filter;
+      display: none;
+    }
+
+    &:hover, &.active {
+      background: $color-background;
+
+      h3 {
+        color: $color-text;
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+
+  p {
+    padding-left: $base-size;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    padding: $base-size * 2;
+
+    a {
+      padding: $base-size ($base-size * 1.5);
       border-radius: $base-size / 3;
-      cursor: pointer;
+      font-size: $font-size-header;
 
-      img {
-        position: absolute;
-        top: 16px;
-        right: 16px;
-        width: $base-size * .75;
-        height: $base-size * .75;
-        filter: $color-header-filter;
-        display: none;
-      }
-
-      &:hover, &.active {
+      &.active {
+        @extend h3;
         background: $color-background;
-
-        h3 {
-          color: $color-text;
-        }
-
-        img {
-          display: block;
-        }
       }
     }
 
-    p {
-      padding-left: $base-size;
-    }
-
-    .pagination {
-      display: flex;
-      justify-content: center;
-      padding: $base-size * 2;
-
-      a {
-        padding: $base-size ($base-size * 1.5);
-        border-radius: $base-size / 3;
-        font-size: $font-size-header;
-
-        &.active {
-          @extend h3;
-          background: $color-background;
-        }
-      }
-
-      img {
-        width: $base-size * 1.5;
-        height: $base-size * 1.5;
-        filter: $color-header-filter;
-      }
+    img {
+      width: $base-size * 1.5;
+      height: $base-size * 1.5;
+      filter: $color-header-filter;
     }
   }
 
@@ -90,7 +89,7 @@
       flex-basis: 30%;
 
       .column-header {
-        width: 32%;
+        width: 85px;
       }
     }
 
@@ -98,28 +97,114 @@
       flex-basis: 30%;
 
       .column-header {
-        width: 52%;
+        width: 133px;
       }
     }
 
     .deal {
-      flex-basis: 25%;
+      flex-basis: 20%;
 
       .column-header {
-        width: 40%;
+        width: 83px;
       }
     }
 
     .account {
-      flex-basis: 15%;
+      flex-basis: 20%;
 
       .column-header {
-        width: 83%;
+        width: 110px;
       }
     }
   }
 
   .details-table {
+    .tracker-name {
+      flex-basis: 13%;
 
+      .column-header {
+        width: 151px;
+      }
+    }
+
+    .initiated-date {
+      flex-basis: 13%;
+
+      .column-header {
+        width: 147px;
+      }
+    }
+
+    .visits {
+      flex-basis: 7%;
+
+      .column-header {
+        width: 87px;
+      }
+    }
+
+    .unique {
+      flex-basis: 8%;
+
+      .column-header {
+        width: 100px;
+      }
+    }
+
+    .signups {
+      flex-basis: 8%;
+
+      .column-header {
+        width: 106px;
+      }
+    }
+
+    .ftd {
+      flex-basis: 6%;
+
+      .column-header {
+        width: 75px;
+      }
+    }
+
+    .depositors {
+      flex-basis: 10%;
+
+      .column-header {
+        width: 130px;
+      }
+    }
+
+    .deposits {
+      flex-basis: 11%;
+
+      .column-header {
+        width: 137px;
+      }
+    }
+
+    .payout {
+      flex-basis: 9%;
+
+      .column-header {
+        width: 125px;
+      }
+    }
+
+    .turnover {
+      flex-basis: 9%;
+
+      .column-header {
+        width: 115px;
+      }
+    }
+
+    .deal {
+      flex-basis: 6%;
+
+      .column-header {
+        width: 80px;
+      }
+    }
   }
 }
