@@ -1,0 +1,125 @@
+.section--payout, .section--details {
+  // display: block;                                // tabelki nie scrollują się
+  // width: 100%;                                   // tabelki nie scrollują się
+  // overflow-x: auto;                              // tabelki nie scrollują się
+
+  .table {
+    width: 95%;
+    // max-width: 100%;                             // tabelki nie scrollują się
+    background: inherit;
+    margin: ($base-size * 2) auto;
+
+
+    .table-row {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: $base-size * 1.5;
+      cursor: pointer;
+      border-bottom: 1px solid $color-background;
+
+      &:hover {
+        background: $color-background;
+      }
+
+      &.main:hover {
+        background: inherit;
+        cursor: inherit;
+      }
+    }
+
+    .column-header {
+      position: relative;
+      padding: $base-size ($base-size * 3) $base-size $base-size;
+      border-radius: $base-size / 3;
+      cursor: pointer;
+
+      img {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: $base-size * .75;
+        height: $base-size * .75;
+        filter: $color-header-filter;
+        display: none;
+      }
+
+      &:hover, &.active {
+        background: $color-background;
+
+        h3 {
+          color: $color-text;
+        }
+
+        img {
+          display: block;
+        }
+      }
+    }
+
+    p {
+      padding-left: $base-size;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      padding: $base-size * 2;
+
+      a {
+        padding: $base-size ($base-size * 1.5);
+        border-radius: $base-size / 3;
+        font-size: $font-size-header;
+
+        &.active {
+          @extend h3;
+          background: $color-background;
+        }
+      }
+
+      img {
+        width: $base-size * 1.5;
+        height: $base-size * 1.5;
+        filter: $color-header-filter;
+      }
+    }
+  }
+
+  .payout-table {
+    .date {
+      flex-basis: 30%;
+
+      .column-header {
+        width: 32%;
+      }
+    }
+
+    .amount {
+      flex-basis: 30%;
+
+      .column-header {
+        width: 52%;
+      }
+    }
+
+    .deal {
+      flex-basis: 25%;
+
+      .column-header {
+        width: 40%;
+      }
+    }
+
+    .account {
+      flex-basis: 15%;
+
+      .column-header {
+        width: 83%;
+      }
+    }
+  }
+
+  .details-table {
+
+  }
+}

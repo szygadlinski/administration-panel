@@ -77,6 +77,9 @@
     <section id="personaldata">
       <div class="personaldata-wrapper"></div>
     </section>
+    <section id="payout">
+      <div class="payout-wrapper"></div>
+    </section>
   </div>
 
   <script id="template-general" type="text/x-handlebars-template">
@@ -486,6 +489,119 @@
       </form>
     </div>
   </script>
+
+  <script id="template-payout" type="text/x-handlebars-template">
+    <div class="section section--payout">                        <!-- payout -->
+      <h2 class="section-title">Payout history</h2>
+
+      <div class="comp--calendar">
+        <div class="calendar-form">
+          <input type="text" name="date" value="16.05.2016">
+          <input type="text" name="date" value="16.05.2016">
+          <div class="calendar-image">
+            <img src="images/icons/calendar.svg">
+          </div>
+        </div>
+        <div class="calendar-refresh">
+          <img src="images/icons/refresh.svg">
+        </div>
+      </div>
+
+      <div class="table payout-table">
+        <div class="table-row main">
+          <div class="date">
+            <div class="column-header active">
+              <h3>Date</h3>
+              <img src="images/icons/arrow-up-small.svg">
+            </div>
+          </div>
+          <div class="amount">
+            <div class="column-header">
+              <h3>Amount ($)</h3>
+              <img src="images/icons/arrow-up-small.svg">
+            </div>
+          </div>
+          <div class="deal">
+            <div class="column-header">
+              <h3>Deal</h3>
+              <img src="images/icons/arrow-up-small.svg">
+            </div>
+          </div>
+          <div class="account">
+            <div class="column-header">
+              <h3>Account</h3>
+              <img src="images/icons/arrow-up-small.svg">
+            </div>
+          </div>
+        </div>
+
+        <div class="table-row">
+          <p class="date">17/08/02 (12:58)</p>
+          <p class="amount">34,425.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">15/08/02 (12:58)</p>
+          <p class="amount">29,436.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">17/08/02 (12:58)</p>
+          <p class="amount">34,425.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">15/08/02 (12:58)</p>
+          <p class="amount">29,436.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">17/08/02 (12:58)</p>
+          <p class="amount">34,425.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">15/08/02 (12:58)</p>
+          <p class="amount">29,436.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">17/08/02 (12:58)</p>
+          <p class="amount">34,425.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+        <div class="table-row">
+          <p class="date">15/08/02 (12:58)</p>
+          <p class="amount">29,436.00</p>
+          <p class="deal">cpl (200)</p>
+          <p class="account">bank</p>
+        </div>
+
+        <div class="pagination">
+          <a href="#"><img src="images/icons/arrow-left.svg"></a>
+          <a href="#" class="active">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">7</a>
+          <a href="#">8</a>
+          <a href="#">9</a>
+          <a href="#"><img src="images/icons/arrow-right.svg"></a>
+        </div>
+
+      </div>
+    </div>
+  </script>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/script.js"></script>

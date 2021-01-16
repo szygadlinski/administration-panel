@@ -9,6 +9,7 @@
       links: '#template-links',
       banners: '#template-banners',
       personalData: '#template-personaldata',
+      payout: '#template-payout',
     },
     containerOf: {
       pages: '.pages',
@@ -16,6 +17,7 @@
       links: '.links-wrapper',
       banners: '.banners-wrapper',
       personalData: '.personaldata-wrapper',
+      payout: '.payout-wrapper',
     },
     navLinks: '.comp--navigation a',
     collapsingButton: '.collapsing-button',
@@ -33,6 +35,7 @@
     links: Handlebars.compile(document.querySelector(select.templateOf.links).innerHTML),
     banners: Handlebars.compile(document.querySelector(select.templateOf.banners).innerHTML),
     personalData: Handlebars.compile(document.querySelector(select.templateOf.personalData).innerHTML),
+    payout: Handlebars.compile(document.querySelector(select.templateOf.payout).innerHTML),
   };
 
 
@@ -64,6 +67,7 @@
         links: templates.links(),
         banners: templates.banners(),
         personalData: templates.personalData(),
+        payout: templates.payout(),
       };
 
       thisPanel.dom.generalWrapper = document.querySelector(select.containerOf.general);
@@ -77,6 +81,9 @@
 
       thisPanel.dom.personalDataWrapper = document.querySelector(select.containerOf.personalData);
       thisPanel.dom.personalDataWrapper.innerHTML = generatedHTMLOf.personalData;
+
+      thisPanel.dom.payoutWrapper = document.querySelector(select.containerOf.payout);
+      thisPanel.dom.payoutWrapper.innerHTML = generatedHTMLOf.payout;
     }
 
     initWidgets(){
