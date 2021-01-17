@@ -24,12 +24,26 @@
     navLinks: '.comp--navigation a',
     collapsingButton: '.collapsing-button',
     collapsingElements: '.collapsing',
+    modals: {
+      all: '.modal',
+      quitModal: '.quit-modal',
+      loginModal: '.login-modal',
+      chatModal: '.chat-modal',
+      overlay: '.overlay',
+      close: '.js--close-modal',
+      open: {
+        logout: '.logout',
+        user: '.user',
+        manager: '.manager-contact',
+      }
+    }
   };
 
   const classNames = {
     active: 'active',
     collapsed: 'collapsed',
     extended: 'extended',
+    show: 'show',
   };
 
   const templates = {
@@ -51,6 +65,7 @@
       thisPanel.initPages();
       thisPanel.initViews();
       thisPanel.initWidgets();
+      thisPanel.initModals();
     }
 
     getElements(){
@@ -60,6 +75,18 @@
       thisPanel.dom.collapsingButton = document.querySelector(select.collapsingButton);
       thisPanel.dom.collapsingElements = document.querySelectorAll(select.collapsingElements);
       thisPanel.dom.extendingElement = document.querySelector(select.containerOf.pages);
+
+      thisPanel.dom.modalsOverlay = document.querySelector(select.modals.overlay);
+      thisPanel.dom.closeModals = document.querySelectorAll(select.modals.close);
+
+      thisPanel.dom.modals = document.querySelectorAll(select.modals.all);
+      thisPanel.dom.quitModal = document.querySelector(select.modals.quitModal);
+      thisPanel.dom.loginModal = document.querySelector(select.modals.loginModal);
+      thisPanel.dom.chatModal = document.querySelector(select.modals.chatModal);
+
+      thisPanel.dom.logoutButton = document.querySelector(select.modals.open.logout);
+      thisPanel.dom.userButton = document.querySelector(select.modals.open.user);
+      thisPanel.dom.managerButton = document.querySelector(select.modals.open.manager);
     }
 
     initViews(){
@@ -122,6 +149,41 @@
       });
     }
 
+    initModals(){
+      const thisPanel = this;
+
+      thisPanel.dom.closeModals.forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.preventDefault();
+          thisPanel.closeModal();
+        });
+      });
+
+      thisPanel.dom.modalsOverlay.addEventListener('click', function(event) {
+        if (event.target === this) {
+          thisPanel.closeModal();
+        }
+      });
+
+      document.addEventListener('keyup', function(event) {
+        if (event.keyCode === 27) {
+          thisPanel.closeModal();
+        }
+      });
+
+      thisPanel.dom.logoutButton.addEventListener('click', function(){
+        thisPanel.openModal(select.modals.quitModal);
+      });
+
+      thisPanel.dom.userButton.addEventListener('click', function(){
+        thisPanel.openModal(select.modals.loginModal);
+      });
+
+      thisPanel.dom.managerButton.addEventListener('click', function(){
+        thisPanel.openModal(select.modals.chatModal);
+      });
+    }
+
     initPages(){
       const thisPanel = this;
 
@@ -171,6 +233,24 @@
           link.getAttribute('href') == '#' + pageId
         );
       }
+    }
+
+    closeModal(){
+      const thisPanel = this;
+
+      thisPanel.dom.modalsOverlay.classList.remove(classNames.show);
+    }
+
+    openModal(modal){
+      const thisPanel = this;
+
+      thisPanel.dom.modals.forEach(function(modal) {
+        modal.classList.remove(classNames.show);
+      });
+
+      thisPanel.dom.modalsOverlay.classList.add(classNames.show);
+
+      document.querySelector(modal).classList.add(classNames.show);
     }
   }
 

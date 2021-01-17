@@ -85,6 +85,59 @@
     </section>
   </div>
 
+  <div class="comp--modals">                                     <!-- modals -->
+    <div class="overlay">
+
+      <div class="modal quit-modal">
+        <h3>Do you really want to quit?</h3>
+        <div class="quit-buttons">
+          <button class="btn btn-grey js--close-modal" type="button">Cancel</button>
+          <button class="btn btn-orange js--close-modal" type="button">Quit</button>
+        </div>
+      </div>
+
+      <div class="modal login-modal">
+        <h2>Login</h2>
+        <form action="" method="POST">
+          <div class="field">
+            <label><img src="images/icons/login.svg"></label>
+            <input type="text" name="login-name" placeholder="login name" minlength="3" maxlength="32" required>
+          </div>
+          <div class="field">
+            <label><img src="images/icons/password.svg"></label>
+            <input type="password" name="password" placeholder="password" minlength="8" maxlength="32" required>
+          </div>
+          <div class="form-button">
+            <button class="btn btn-orange" type="submit">Enter</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal chat-modal">
+        <h2>Online chat with your personal manager</h2>
+        <img class="btn-close js--close-modal" src="images/icons/close.svg">
+        <div class="manager-data">
+          <img src="images/manager.png">
+          <div class="manager-name">
+            <p>Michael E.</p>
+            <p>online</p>
+          </div>
+        </div>
+        <div class="messages"></div>
+        <form action="" method="POST">
+          <div class="field">
+            <label><img src="images/icons/message.svg"></label>
+            <textarea name="message" placeholder="Enter the message..." rows="1" cols="100" maxlength="500" required></textarea>
+          </div>
+          <div class="form-button">
+            <button class="btn btn-orange" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
   <script id="template-general" type="text/x-handlebars-template">
     <div class="section section--general-statistic">  <!-- general statistic -->
       <h2 class="section-title">General statistic</h2>
@@ -816,7 +869,6 @@
       </div>
     </div>
   </script>
-
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="js/script.js"></script>

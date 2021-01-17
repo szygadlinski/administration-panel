@@ -1,5 +1,4 @@
 @import "variables";
-@import "mixins";
 
 @import "normalize";
 @import "layout";
@@ -13,6 +12,7 @@
 @import "components/calendar";
 @import "components/buttons";
 @import "components/list";
+@import "components/modals";
 
 /* Sections */
 
@@ -21,10 +21,6 @@
 @import "sections/links&banners";
 @import "sections/personaldata";
 @import "sections/payout&details";
-
-/* Pages */
-
-@import "pages/general";
 
 /* Media */
 

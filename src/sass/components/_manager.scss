@@ -5,6 +5,7 @@
   .manager-contact {
     display: inline-flex;
     align-items: center;
+    cursor: pointer;
   }
 
   h2 {
@@ -16,7 +17,6 @@
     width: $base-size * 4;
     height: $base-size * 4;
     margin: ($base-size * 2) 0;
-    cursor: pointer;
   }
 
   a {
