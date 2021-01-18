@@ -24,6 +24,7 @@
     navLinks: '.comp--navigation a',
     collapsingButton: '.collapsing-button',
     collapsingElements: '.collapsing',
+    passwordInputs: '.password',
     modals: {
       all: '.modal',
       quitModal: '.quit-modal',
@@ -44,6 +45,7 @@
     collapsed: 'collapsed',
     extended: 'extended',
     show: 'show',
+    passwordValidation: 'is-valid',
   };
 
   const templates = {
@@ -75,6 +77,8 @@
       thisPanel.dom.collapsingButton = document.querySelector(select.collapsingButton);
       thisPanel.dom.collapsingElements = document.querySelectorAll(select.collapsingElements);
       thisPanel.dom.extendingElement = document.querySelector(select.containerOf.pages);
+
+      thisPanel.dom.passwordInputs = document.querySelectorAll(select.passwordInputs);
 
       thisPanel.dom.modalsOverlay = document.querySelector(select.modals.overlay);
       thisPanel.dom.closeModals = document.querySelectorAll(select.modals.close);
@@ -123,30 +127,43 @@
     initWidgets(){
       const thisPanel = this;
 
-      const screenWidth = window.innerWidth;
+      const isMobile = window.innerWidth <= 767;
+      let isMenuClicked = true;
 
-      if (screenWidth <= 767){
+      const toggleClasses = function(isExtended){
         for (const collapsingElement of thisPanel.dom.collapsingElements){
-          collapsingElement.classList.add(classNames.collapsed);
+          collapsingElement.classList.toggle(classNames.collapsed, isExtended);
         }
-        thisPanel.dom.extendingElement.classList.add(classNames.extended);
+        thisPanel.dom.extendingElement.classList.toggle(classNames.extended, isExtended);
+      };
 
-        for (let link of thisPanel.navLinks) {
-          link.addEventListener('click', function(){
-            for (const collapsingElement of thisPanel.dom.collapsingElements){
-              collapsingElement.classList.add(classNames.collapsed);
-            }
-            thisPanel.dom.extendingElement.classList.add(classNames.extended);
-          });
-        }
+      for (let link of thisPanel.navLinks) {
+        link.addEventListener('click', function(){
+          if (isMobile){
+            toggleClasses(true);
+          }
+        });
+      }
+
+      if (isMobile){
+        toggleClasses(true);
       }
 
       thisPanel.dom.collapsingButton.addEventListener('click', function(){
-        for (const collapsingElement of thisPanel.dom.collapsingElements){
-          collapsingElement.classList.toggle(classNames.collapsed);
-        }
-        thisPanel.dom.extendingElement.classList.toggle(classNames.extended);
+        toggleClasses(isMenuClicked);
+        isMenuClicked = !isMenuClicked;
       });
+
+      window.addEventListener('resize', function(){
+        toggleClasses(isMobile);
+      });
+
+      for (let passwordInput of thisPanel.dom.passwordInputs) {
+        passwordInput.addEventListener('input', function(event){
+          event.preventDefault();
+          passwordInput.classList.add(classNames.passwordValidation);
+        });
+      }
     }
 
     initModals(){

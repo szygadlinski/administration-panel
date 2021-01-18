@@ -26,6 +26,7 @@
 
   .modal {
     max-width: 1000px;
+    //width: 100%;
     margin: auto;
     background: $color-white;
     display: none;
@@ -45,6 +46,7 @@
 
     .quit-buttons {
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-end;
     }
 
@@ -61,6 +63,8 @@
 
     form {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       align-items: center;
       margin: ($base-size * 3);
     }
@@ -159,12 +163,16 @@
 
     form {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
       align-items: center;
+      width: 100%;
       padding: $base-size / 2;
 
       .field {
-        display: inline-flex;
+        display: flex;
         align-items: center;
+        width: 80%;
         padding: $base-size / 2;
         margin: $base-size;
         border: 1px solid $color-background;
@@ -183,6 +191,7 @@
       }
 
       textarea {
+        width: 100%;
         font-size: $font-size-text;
         font-weight: 400;
         color: $color-text;

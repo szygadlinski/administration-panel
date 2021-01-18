@@ -50,6 +50,16 @@
       width: 103px;
     }
   }
+
+  .comp--modals {
+    .chat-modal {
+      min-width: 600px;
+
+      form .field {
+        width: 70%;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -154,6 +164,60 @@
     input[type="password"] {
       width: 100%;
       margin-top: $base-size / 2;
+    }
+  }
+  .section--payout, .section--details {
+    .pagination {
+      a {
+        padding: $base-size ($base-size / 2);
+      }
+    }
+  }
+
+  .comp--modals {
+    .quit-modal {
+      min-width: 200px;
+
+      .btn {
+        margin: $base-size;
+      }
+    }
+
+    .login-modal {
+      width: 100%;
+
+      .field {
+        width: 100%;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+      }
+
+      .btn {
+        padding: $base-size ($base-size * 2);
+      }
+    }
+
+    .chat-modal {
+      min-width: 100%;
+
+      h2 {
+        padding: ($base-size * 1.5) ($base-size * 3) ($base-size * 1.5) ($base-size * 1.5);
+      }
+
+      .manager-name {
+        margin: ($base-size * 1.5) 0;
+      }
+
+      p:first-of-type {
+        font-size: $base-size * 2;
+      }
+
+      form textarea {
+        height: $base-size * 4;
+      }
     }
   }
 }

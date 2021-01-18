@@ -1,11 +1,13 @@
 .section--payout, .section--details {
-  // display: block;                                // tabelki nie scrollują się
-  // width: 100%;                                   // tabelki nie scrollują się
-  // overflow-x: auto;                              // tabelki nie scrollują się
+  .scroll-wrapper {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
 
   .table {
     width: 95%;
-    // max-width: 100%;                             // tabelki nie scrollują się
+    max-width: 100%;
     background: inherit;
     margin: ($base-size * 2) auto;
   }
@@ -29,6 +31,7 @@
   }
 
   .column-header {
+    display: inline-block;
     position: relative;
     padding: $base-size ($base-size * 3) $base-size $base-size;
     border-radius: $base-size / 3;
@@ -87,124 +90,79 @@
   .payout-table {
     .date {
       flex-basis: 30%;
-
-      .column-header {
-        width: 85px;
-      }
+      min-width: 85px;
     }
 
     .amount {
       flex-basis: 30%;
-
-      .column-header {
-        width: 133px;
-      }
+      min-width: 133px;
     }
 
     .deal {
       flex-basis: 20%;
-
-      .column-header {
-        width: 83px;
-      }
+      min-width: 83px;
     }
 
     .account {
       flex-basis: 20%;
-
-      .column-header {
-        width: 110px;
-      }
+      min-width: 110px;
     }
   }
 
   .details-table {
     .tracker-name {
       flex-basis: 13%;
-
-      .column-header {
-        width: 151px;
-      }
+      min-width: 151px;
     }
 
     .initiated-date {
       flex-basis: 13%;
-
-      .column-header {
-        width: 147px;
-      }
+      min-width: 147px;
     }
 
     .visits {
       flex-basis: 7%;
-
-      .column-header {
-        width: 87px;
-      }
+      min-width: 87px;
     }
 
     .unique {
       flex-basis: 8%;
-
-      .column-header {
-        width: 100px;
-      }
+      min-width: 100px;
     }
 
     .signups {
       flex-basis: 8%;
-
-      .column-header {
-        width: 106px;
-      }
+      min-width: 106px;
     }
 
     .ftd {
       flex-basis: 6%;
-
-      .column-header {
-        width: 75px;
-      }
+      min-width: 75px;
     }
 
     .depositors {
       flex-basis: 10%;
-
-      .column-header {
-        width: 130px;
-      }
+      min-width: 130px;
     }
 
     .deposits {
       flex-basis: 11%;
-
-      .column-header {
-        width: 137px;
-      }
+      min-width: 137px;
     }
 
     .payout {
       flex-basis: 9%;
-
-      .column-header {
-        width: 125px;
-      }
+      min-width: 125px;
     }
 
     .turnover {
       flex-basis: 9%;
-
-      .column-header {
-        width: 115px;
-      }
+      min-width: 115px;
     }
 
     .deal {
       flex-basis: 6%;
-
-      .column-header {
-        width: 80px;
-      }
+      min-width: 80px;
     }
   }
 }
