@@ -1,4 +1,4 @@
-/* global Handlebars */
+/* global Handlebars, Chart */
 
 {
   'use strict';
@@ -20,6 +20,7 @@
       banners: '.banners-wrapper',
       personalData: '.personaldata-wrapper',
       payout: '.payout-wrapper',
+      chart: 'myChart',
     },
     navLinks: '.comp--navigation a',
     collapsingButton: '.collapsing-button',
@@ -67,6 +68,7 @@
       thisPanel.initPages();
       thisPanel.initViews();
       thisPanel.initWidgets();
+      thisPanel.initChart();
       thisPanel.initModals();
     }
 
@@ -164,6 +166,40 @@
           passwordInput.classList.add(classNames.passwordValidation);
         });
       }
+    }
+
+    initChart(){
+      let ctx = document.getElementById(select.containerOf.chart).getContext('2d');
+
+      Chart.defaults.global.defaultFontColor = '#636363';
+      Chart.defaults.global.defaultFontFamily = '"Open Sans", Helvetica, Arial';
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10'],
+          datasets: [{
+            label: 'Signups',
+            backgroundColor: '#56819f',
+            borderColor: '#56819f',
+            fontSize: '20px',
+            data: [52, 51, 41, 94, 26, 6, 72, 9, 21, 88],
+          },
+          {
+            label: 'FTD',
+            backgroundColor: '#f58220',
+            borderColor: '#f58220',
+            data: [6, 72, 1, 0, 47, 11, 50, 44, 63, 76],
+          },
+          {
+            label: 'Earned',
+            backgroundColor: '#04ae00',
+            borderColor: '#04ae00',
+            data: [59, 49, 68, 90, 67, 41, 13, 38, 48, 48],
+            hidden: true,
+          }],
+        },
+      });
     }
 
     initModals(){

@@ -25,32 +25,10 @@
     padding: ($base-size * 4) 0;
   }
 
-  .earnings-chart-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: ($base-size * 2) 0 ($base-size * 4);
-
-    .btn-signups::after {
-      background: $color-blue;
-    }
-
-    .btn-ftd::after {
-      background: $color-orange;
-    }
-
-    .btn-earned::after {
-      background: $color-green;
-    }
-  }
-
   .earnings-chart-image {
+    margin: ($base-size * 3) auto 0;
     display: block;
-    width: 100%;
+    width: 90%;
     overflow-x: auto;
-
-    img {
-      width: auto;
-    }
   }
 }
