@@ -80,8 +80,6 @@
       thisPanel.dom.collapsingElements = document.querySelectorAll(select.collapsingElements);
       thisPanel.dom.extendingElement = document.querySelector(select.containerOf.pages);
 
-      thisPanel.dom.passwordInputs = document.querySelectorAll(select.passwordInputs);
-
       thisPanel.dom.modalsOverlay = document.querySelector(select.modals.overlay);
       thisPanel.dom.closeModals = document.querySelectorAll(select.modals.close);
 
@@ -130,7 +128,7 @@
       const thisPanel = this;
 
       const isMobile = window.innerWidth <= 767;
-      let isMenuClicked = true;
+      let isMenuClicked = false;
 
       const toggleClasses = function(isExtended){
         for (const collapsingElement of thisPanel.dom.collapsingElements){
@@ -159,6 +157,10 @@
       window.addEventListener('resize', function(){
         toggleClasses(isMobile);
       });
+
+      toggleClasses(window.innerWidth <= 767);
+
+      thisPanel.dom.passwordInputs = document.querySelectorAll(select.passwordInputs);
 
       for (let passwordInput of thisPanel.dom.passwordInputs) {
         passwordInput.addEventListener('input', function(event){

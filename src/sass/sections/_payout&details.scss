@@ -1,21 +1,19 @@
 .section--payout, .section--details {
   .scroll-wrapper {
     display: block;
-    width: 100%;
     overflow-x: auto;
   }
 
   .table {
-    width: 95%;
     max-width: 100%;
     background: inherit;
     margin: ($base-size * 2) auto;
   }
 
   .table-row {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    width: 100%;
+    margin: 0 ($base-size * 2);
     padding: $base-size * 1.5;
     cursor: pointer;
     border-bottom: 1px solid $color-background;
