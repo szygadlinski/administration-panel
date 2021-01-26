@@ -1,0 +1,26 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3992370, 2021-01-01T17:49:59-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: ReklameScript-RegularDEMO by HVD Fonts
+ * URL: https://www.myfonts.com/fonts/hvdfonts/reklame-script/demo/
+ * Copyright: Copyright (c) 2010 by Hannes von Doehren. All rights reserved.
+ *
+ *
+ *
+ * © 2021 MyFonts Inc
+*/
+
+
+
+
+@font-face {
+  font-family: 'Logo Font';
+  src: url('logo-font/font.woff2') format('woff2'), url('logo-font/font.woff') format('woff');
+}

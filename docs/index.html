@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Just do it!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <link rel="stylesheet" type="text/css" href="vendor/logo-font.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <nav class="section--logo">                                      <!-- logo -->
+    <div class="comp--logo collapsing-button">
+      <h1>Just do it</h1>
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <nav class="section--sidebar collapsing">                     <!-- sidebar -->
+    <div class="comp--navigation">
+      <a href="#general"><img src="images/icons/general.svg">General</a>
+      <a href="#details"><img src="images/icons/details.svg">Details</a>
+      <a href="#links"><img src="images/icons/links.svg">Links</a>
+      <a href="#banners"><img src="images/icons/banners.svg">Banners</a>
+      <a href="#personaldata"><img src="images/icons/personaldata.svg">Personal data</a>
+      <a href="#payout"><img src="images/icons/payout.svg">Payout</a>
+      <a href="#postback"><img src="images/icons/postback.svg">Postback</a>
+    </div>
+
+    <div class="comp--manager">
+      <h2>Your manager</h2>
+      <div class="manager-contact">
+        <img src="images/manager.png">
+        <a href="#">Mikhael E.</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="comp--topbar collapsing">                          <!-- topbar -->
+    <div class="topbar-box wallet">
+      <img class="topbar-item" src="images/icons/wallet.svg">
+      <h2 class="topbar-item">$1,500.00</h2>
+      <img class="topbar-item small" src="images/icons/arrow-down-small.svg">
+    </div>
+
+    <div class="topbar-box alerts">
+      <img class="topbar-item" src="images/icons/notification.svg">
+    </div>
+
+    <div class="topbar-box user">
+      <img class="topbar-item" src="images/icons/profile.svg">
+      <a href="#" class="topbar-item">Leonardo Dicaprio</a>
+    </div>
+
+    <div class="topbar-box logout">
+      <img class="topbar-item" src="images/icons/quit.svg">
+    </div>
+  </nav>
+
+  <div class="pages">                                   <!-- page containers -->
+    <section id="general">
+      <div class="general-wrapper"></div>
+    </section>
+    <section id="details">
+      <div class="details-wrapper"></div>
+    </section>
+    <section id="links">
+      <div class="links-wrapper"></div>
+    </section>
+    <section id="banners">
+      <div class="banners-wrapper"></div>
+    </section>
+    <section id="personaldata">
+      <div class="personaldata-wrapper"></div>
+    </section>
+    <section id="payout">
+      <div class="payout-wrapper"></div>
+    </section>
+  </div>
+
+  <div class="comp--modals">                                     <!-- modals -->
+    <div class="overlay">
+
+      <div class="modal quit-modal">
+        <h3>Do you really want to quit?</h3>
+        <div class="quit-buttons">
+          <button class="btn btn-grey js--close-modal" type="button">Cancel</button>
+          <button class="btn btn-orange js--close-modal" type="button">Quit</button>
+        </div>
+      </div>
+
+      <div class="modal login-modal">
+        <h2>Login</h2>
+        <form action="" method="POST">
+          <div class="field">
+            <label><img src="images/icons/login.svg"></label>
+            <input type="text" name="login-name" placeholder="login name" minlength="3" maxlength="32" required>
+          </div>
+          <div class="field">
+            <label><img src="images/icons/password.svg"></label>
+            <input type="password" name="password" placeholder="password" minlength="8" maxlength="32" required>
+          </div>
+          <div class="form-button">
+            <button class="btn btn-orange" type="submit">Enter</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="modal chat-modal">
+        <h2>Online chat with your personal manager</h2>
+        <img class="btn-close js--close-modal" src="images/icons/close.svg">
+        <div class="manager-data">
+          <img src="images/manager.png">
+          <div class="manager-name">
+            <p>Michael E.</p>
+            <p>online</p>
+          </div>
+        </div>
+        <div class="messages"></div>
+        <form action="" method="POST">
+          <div class="field">
+            <label><img src="images/icons/message.svg"></label>
+            <textarea name="message" placeholder="Enter the message..." rows="1" maxlength="500" required></textarea>
+          </div>
+          <div class="form-button">
+            <button class="btn btn-orange" type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script id="template-general" type="text/x-handlebars-template">
+    <div class="section section--general-statistic">  <!-- general statistic -->
+      <h2 class="section-title">General statistic</h2>
+
+      <div class="comp--calendar">
+        <div class="calendar-form">
+          <input type="text" name="date" value="16.05.2016">
+          <input type="text" name="date" value="16.05.2016">
+          <div class="calendar-image">
+            <img src="images/icons/calendar.svg">
+          </div>
+        </div>
+        <div class="calendar-refresh">
+          <img src="images/icons/refresh.svg">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="list-with-one-digit">
+          <div class="list-with-one-digit-box">
+            <h3>Visit Signups</h3>
+            <p>124</p>
+          </div>
+
+          <div class="list-with-one-digit-box">
+            <h3>Net deposit</h3>
+            <p>564</p>
+          </div>
+
+          <div class="list-with-one-digit-box">
+            <h3>FTD</h3>
+            <p>445</p>
+          </div>
+
+          <div class="list-with-one-digit-box">
+            <h3>Turn over</h3>
+            <p>432</p>
+          </div>
+        </div>
+
+        <div class="earnings-chart">
+          <h3>Earnings chart</h3>
+          <div class="earnings-chart-image">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section section--links">                          <!-- links -->
+      <h2 class="section-title">Links</h2>
+      <div class="container">
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
+        </div>
+
+        <div class="comp--list">
+          <div class="list-box">
+            <h3>Home page</h3>
+            <a href="#">http://www.homepage.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Currently offer</h3>
+            <a href="#">http://www.currently.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Blurpix</h3>
+            <a href="#">http://www.blurpix.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Your site</h3>
+            <a href="#">http://www.yoursite.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Google</h3>
+            <a href="#">http://www.google.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Facebook</h3>
+            <a href="#">http://www.facebook.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Dashboard</h3>
+            <a href="#">http://www.dashboard.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Blurax</h3>
+            <a href="#">http://www.blurax.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Piece of Wine</h3>
+            <a href="#">http://www.pieceofwine.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Twitter</h3>
+            <a href="#">http://www.twitter.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+        </div>
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
+        </div>
+
+      </div>
+    </div>
+  </script>
+
+  <script id="template-details" type="text/x-handlebars-template">
+    <div class="section section--details">                      <!-- details -->
+      <h2 class="section-title">Detail statistic</h2>
+
+      <div class="comp--calendar">
+        <div class="calendar-form">
+          <input type="text" name="date" value="16.05.2016">
+          <input type="text" name="date" value="16.05.2016">
+          <div class="calendar-image">
+            <img src="images/icons/calendar.svg">
+          </div>
+        </div>
+        <div class="calendar-refresh">
+          <img src="images/icons/refresh.svg">
+        </div>
+      </div>
+
+      <div class="scroll-wrapper">
+        <div class="table details-table">
+          <div class="table-row main">
+
+            <div class="tracker-name">
+              <div class="column-header">
+                <h3>Tracker name</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="initiated-date">
+              <div class="column-header">
+                <h3>Initiated date</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="visits">
+              <div class="column-header">
+                <h3>Visits</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="unique">
+              <div class="column-header">
+                <h3>Unique</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="signups">
+              <div class="column-header">
+                <h3>Signups</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="ftd">
+              <div class="column-header">
+                <h3>FTD</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="depositors">
+              <div class="column-header">
+                <h3>Depositors</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="deposits">
+              <div class="column-header active">
+                <h3>Deposits ($)</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="payout">
+              <div class="column-header">
+                <h3>Payout ($)</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="turnover">
+              <div class="column-header">
+                <h3>Turnover</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="deal">
+              <div class="column-header">
+                <h3>Deal</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-row">
+            <p class="tracker-name">aff/sam_test</p>
+            <p class="initiated-date">17/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">34,425.00</p>
+            <p class="payout">234.00</p>
+            <p class="turnover">421,342.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/leo_test</p>
+            <p class="initiated-date">15/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">29,436.00</p>
+            <p class="payout">941.00</p>
+            <p class="turnover">784,435.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/sam_test</p>
+            <p class="initiated-date">17/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">34,425.00</p>
+            <p class="payout">234.00</p>
+            <p class="turnover">421,342.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/leo_test</p>
+            <p class="initiated-date">15/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">29,436.00</p>
+            <p class="payout">941.00</p>
+            <p class="turnover">784,435.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/sam_test</p>
+            <p class="initiated-date">17/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">34,425.00</p>
+            <p class="payout">234.00</p>
+            <p class="turnover">421,342.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/leo_test</p>
+            <p class="initiated-date">15/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">29,436.00</p>
+            <p class="payout">941.00</p>
+            <p class="turnover">784,435.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/sam_test</p>
+            <p class="initiated-date">17/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">34,425.00</p>
+            <p class="payout">234.00</p>
+            <p class="turnover">421,342.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+          <div class="table-row">
+            <p class="tracker-name">aff/leo_test</p>
+            <p class="initiated-date">15/08/02 (12:58)</p>
+            <p class="visits">232</p>
+            <p class="unique">114</p>
+            <p class="signups">12</p>
+            <p class="ftd">6</p>
+            <p class="depositors">3</p>
+            <p class="deposits">29,436.00</p>
+            <p class="payout">941.00</p>
+            <p class="turnover">784,435.00</p>
+            <p class="deal">cpl (200)</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="pagination">
+        <a href="#"><img src="images/icons/arrow-left.svg"></a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#"><img src="images/icons/arrow-right.svg"></a>
+      </div>
+
+    </div>
+  </script>
+
+  <script id="template-links" type="text/x-handlebars-template">
+    <div class="section section--links">                          <!-- links -->
+      <h2 class="section-title">Links</h2>
+      <div class="container">
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
+        </div>
+
+        <div class="comp--list">
+          <div class="list-box">
+            <h3>Home page</h3>
+            <a href="#">http://www.homepage.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Currently offer</h3>
+            <a href="#">http://www.currently.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Blurpix</h3>
+            <a href="#">http://www.blurpix.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Your site</h3>
+            <a href="#">http://www.yoursite.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Google</h3>
+            <a href="#">http://www.google.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Facebook</h3>
+            <a href="#">http://www.facebook.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Dashboard</h3>
+            <a href="#">http://www.dashboard.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Blurax</h3>
+            <a href="#">http://www.blurax.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Piece of Wine</h3>
+            <a href="#">http://www.pieceofwine.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Twitter</h3>
+            <a href="#">http://www.twitter.com</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+        </div>
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
+        </div>
+
+      </div>
+    </div>
+  </script>
+
+  <script id="template-banners" type="text/x-handlebars-template">
+    <div class="section section--banners">                      <!-- banners -->
+      <h2 class="section-title">Banners</h2>
+      <div class="container">
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
+        </div>
+
+        <div class="comp--list">
+          <div class="list-box">
+            <h3>Banner main</h3>
+            <a href="#">http://www.website.com/bannermain.gif</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Sign up banner</h3>
+            <a href="#">http://www.website.com/signup.gif</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Banner left side</h3>
+            <a href="#">http://www.website.com/leftside.gif</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Vertical banner</h3>
+            <a href="#">http://www.website.com/vert.gif</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Front banner</h3>
+            <a href="#">http://www.website.com/front.gif</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+          <div class="list-box">
+            <h3>Horizontal banner</h3>
+            <a href="#">http://www.website.com/horizontal.gif</a>
+            <div class="list-box-images">
+              <img src="images/icons/links.svg">
+              <img src="images/icons/trash.svg">
+            </div>
+          </div>
+
+        <div class="new-link-button">
+          <button class="btn btn-orange" type="button">+ add new</button>
+        </div>
+
+      </div>
+    </div>
+  </script>
+
+  <script id="template-personaldata" type="text/x-handlebars-template">
+    <div class="section section--personaldata">           <!-- personal data -->
+      <h2 class="section-title">Personal data</h2>
+      <form action="" method="POST">
+
+        <div class="field-group">
+          <div class="field">
+            <label>Name</label>
+            <input type="text" name="name" placeholder="Leonardo" minlength="2" maxlength="20" required>
+          </div>
+          <div class="field">
+            <label>Surname</label>
+            <input type="text" name="surname" placeholder="Dicaprio" minlength="2" maxlength="20" required>
+          </div>
+          <div class="field">
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="leo@gmail.com" minlength="6" maxlength="50" required>
+          </div>
+          <div class="field">
+            <label>Phone number</label>
+            <input type="number" name="phonenumber" placeholder="+14325550044" min="100000000" max="9999999999999" required>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label>Skype</label>
+            <input type="text" name="skype" placeholder="Leonardo.D">
+          </div>
+          <div class="field">
+            <label>ICQ</label>
+            <input type="text" name="icq">
+          </div>
+          <div class="field">
+            <label>Msn</label>
+            <input type="text" name="msn">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label>Wallet</label>
+            <input type="number" name="wallet" min="1" max="1000000" step="1">
+          </div>
+        </div>
+
+        <div class="field-group">
+          <div class="field">
+            <label>Password</label>
+            <input class="password" type="password" name="password" minlength="8" maxlength="32" required>
+          </div>
+          <div class="field">
+            <label>Repeat</label>
+            <input class="password" type="password" name="repeat" minlength="8" maxlength="32" required>
+          </div>
+        </div>
+
+        <div class="form-button">
+          <button class="btn btn-orange" type="submit">Save</button>
+        </div>
+
+      </form>
+    </div>
+  </script>
+
+  <script id="template-payout" type="text/x-handlebars-template">
+    <div class="section section--payout">                        <!-- payout -->
+      <h2 class="section-title">Payout history</h2>
+
+      <div class="comp--calendar">
+        <div class="calendar-form">
+          <input type="text" name="date" value="16.05.2016">
+          <input type="text" name="date" value="16.05.2016">
+          <div class="calendar-image">
+            <img src="images/icons/calendar.svg">
+          </div>
+        </div>
+        <div class="calendar-refresh">
+          <img src="images/icons/refresh.svg">
+        </div>
+      </div>
+
+      <div class="scroll-wrapper">
+        <div class="table payout-table">
+          <div class="table-row main">
+
+            <div class="date">
+              <div class="column-header active">
+                <h3>Date</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="amount">
+              <div class="column-header">
+                <h3>Amount ($)</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="deal">
+              <div class="column-header">
+                <h3>Deal</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+            <div class="account">
+              <div class="column-header">
+                <h3>Account</h3>
+                <img src="images/icons/arrow-up-small.svg">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-row">
+            <p class="date">17/08/02 (12:58)</p>
+            <p class="amount">34,425.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">15/08/02 (12:58)</p>
+            <p class="amount">29,436.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">17/08/02 (12:58)</p>
+            <p class="amount">34,425.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">15/08/02 (12:58)</p>
+            <p class="amount">29,436.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">17/08/02 (12:58)</p>
+            <p class="amount">34,425.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">15/08/02 (12:58)</p>
+            <p class="amount">29,436.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">17/08/02 (12:58)</p>
+            <p class="amount">34,425.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+          <div class="table-row">
+            <p class="date">15/08/02 (12:58)</p>
+            <p class="amount">29,436.00</p>
+            <p class="deal">cpl (200)</p>
+            <p class="account">bank</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="pagination">
+        <a href="#"><img src="images/icons/arrow-left.svg"></a>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#"><img src="images/icons/arrow-right.svg"></a>
+      </div>
+
+    </div>
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

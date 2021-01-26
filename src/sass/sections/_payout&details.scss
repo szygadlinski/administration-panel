@@ -12,6 +12,7 @@
 
   .table-row {
     display: inline-flex;
+    width: 100%;
     align-items: center;
     margin: 0 ($base-size * 2);
     padding: $base-size * 1.5;

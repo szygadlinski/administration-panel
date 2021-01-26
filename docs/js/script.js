@@ -158,6 +158,7 @@
         toggleClasses(isMobile());
       });
 
+
       thisPanel.dom.passwordInputs = document.querySelectorAll(select.passwordInputs);
 
       for (let passwordInput of thisPanel.dom.passwordInputs) {
